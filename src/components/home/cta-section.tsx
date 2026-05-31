@@ -15,9 +15,11 @@ export function CtaSection() {
           </div>
           
           <a
-            href="mailto:patrick@example.com"
+            href="https://wa.me/250793081660"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#914bf1] text-white transition-transform hover:scale-110 active:scale-90"
-            aria-label="Contact Us"
+            aria-label="Contact via WhatsApp"
           >
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <line x1="7" y1="17" x2="17" y2="7" />

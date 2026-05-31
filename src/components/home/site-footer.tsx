@@ -4,11 +4,11 @@ export function SiteFooter() {
       <div className="flex flex-col items-center gap-8 border-t border-white/5 py-12">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-lg bg-[#914bf1]" />
-          <span className="text-[24px] font-bold tracking-tight text-white">Patrick James</span>
+          <span className="text-[24px] font-bold tracking-tight text-white">Patrick IGIRANEZA</span>
         </div>
         
         <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4">
-          {["Expertise", "Work", "Experience", "Thoughts", "Contact"].map((item) => (
+          {["Home", "Projects", "Tools", "Testimonials", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -20,7 +20,7 @@ export function SiteFooter() {
         </nav>
 
         <p className="text-[14px] text-white/20">
-          © 2022 Patrick James. All rights reserved.
+          © 2026 Patrick IGIRANEZA. All rights reserved.
         </p>
       </div>
     </footer>

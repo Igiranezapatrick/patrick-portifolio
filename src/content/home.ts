@@ -18,6 +18,7 @@ export type Project = {
   title: string;
   category: string;
   image: string;
+  link: string;
 };
 
 export type Tool = {
@@ -49,111 +50,115 @@ export const navLinks: NavLink[] = [
   { href: "#home", label: "Home" },
   { href: "#projects", label: "Projects" },
   { href: "#services", label: "Tools" },
-  { href: "#testimonials", label: "Experience" },
+  { href: "#testimonials", label: "Testimonials" },
   { href: "#thoughts", label: "Thoughts" },
   { href: "#contact", label: "Contact" },
 ];
 
 export const stats: Stat[] = [
   {
-    value: "12",
+    value: "4",
     label: "Years of Experience",
     detail: "",
   },
   {
-    value: "46",
+    value: "12",
     label: "Projects Completed",
     detail: "",
   },
   {
-    value: "20",
-    label: "Worldwide Clients",
+    value: "5",
+    label: "Potential Clients",
     detail: "",
   },
 ];
 
 export const clients: ClientLogo[] = [
-  { name: "Bear", wordmark: "logo ipsum" },
-  { name: "Bolt", wordmark: "Logoipsum" },
-  { name: "Arc", wordmark: "Logo" },
-  { name: "Sign", wordmark: "logoipsum" },
+  { name: "Mugamba", wordmark: "Mugamba Coffee" },
+  { name: "Agasobanuye", wordmark: "AG.Micorp" },
+  { name: "Kairos", wordmark: "Kairos Inn" },
+  { name: "Pi-Films", wordmark: "Pi Films" },
 ];
 
 export const projects: Project[] = [
   {
-    title: "Majd",
-    category: "Free Portfolio Template",
+    title: "AG.Micorp",
+    category: "Agasobanuye Streaming Site",
     image: "/project-atlas.svg",
+    link: "https://ag.micorp.pro",
   },
   {
-    title: "NajmAI",
-    category: "Modern Framer Template",
+    title: "Mugamba Coffee",
+    category: "Coffee Factory Website",
     image: "/project-current.svg",
+    link: "https://mugambacf.vercel.app",
   },
   {
-    title: "Damas",
-    category: "SaaS Framer Template",
+    title: "Kairos Inn",
+    category: "Full Stack Hotel Website",
     image: "/project-frame.svg",
+    link: "https://kairosinn.netlify.app",
   },
   {
-    title: "Faseelh",
-    category: "Free Framer Template",
+    title: "Pi Films",
+    category: "Movie Streaming Site",
     image: "/project-signal.svg",
+    link: "https://pi-films.netlify.app",
   },
 ];
 
 export const tools: Tool[] = [
-  { name: "SiteFlow", category: "Website Builder", icon: "S" },
-  { name: "Pixelo", category: "Design Tool", icon: "P" },
-  { name: "JuiceBox", category: "Payment Provider", icon: "J" },
-  { name: "TalkAI", category: "AI Assistant", icon: "T" },
-  { name: "NoteSpace", category: "Productivity Tool", icon: "N" },
-  { name: "WebCraft", category: "React framework", icon: "W" },
+  { name: "Supabase", category: "Backend / Database", icon: "S" },
+  { name: "Git", category: "Version Control", icon: "G" },
+  { name: "GitHub", category: "Code Hosting", icon: "GH" },
+  { name: "Vercel", category: "Deployment", icon: "V" },
+  { name: "GSC", category: "SEO / Analysis", icon: "G" },
+  { name: "VS Code", category: "Development IDE", icon: "VS" },
 ];
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "John expertly blends design with functionality, transforming our product into a sleek, user-friendly experience that our customers love!",
-    name: "William M.",
-    role: "",
+    quote: "Working with Patrick was a game-changer for our business. He took our vision for the Mugamba Coffee Factory and turned it into a professional, high-performing website that truly represents our brand. His technical expertise and attention to detail are unmatched.",
+    name: "Mugamba Coffee Owner",
+    role: "CEO",
     image: "/portrait-placeholder.svg",
   },
 ];
 
 export const articles: Article[] = [
   {
-    title: "Starting and Growing a Career in Web Design",
-    date: "Apr 8, 2022",
-    category: "",
+    title: "Building Scalable Web Apps with Supabase",
+    date: "May 20, 2024",
+    category: "Development",
     image: "/project-atlas.svg",
   },
   {
-    title: "Create a Landing Page That Performs Great",
-    date: "Mar 15, 2022",
-    category: "",
+    title: "The Importance of SEO for Small Businesses",
+    date: "Apr 15, 2024",
+    category: "Marketing",
     image: "/project-current.svg",
   },
 ];
 
 export const faqs: Faq[] = [
   {
-    question: "What services do you offer?",
-    answer: "I provide a wide range of services including UI/UX design, frontend development, and product strategy to help businesses launch successful digital products.",
+    question: "What is your primary tech stack?",
+    answer: "I am a Fullstack Web Developer specializing in modern technologies like React, Next.js, and Supabase. I focus on building scalable, high-performance applications with clean code.",
   },
   {
-    question: "What is your design process?",
-    answer: "My process starts with research and discovery, followed by wireframing, high-fidelity design, and iterative prototyping to ensure the best user experience.",
+    question: "How do you handle hosting and deployment?",
+    answer: "I primarily use Vercel and Netlify for frontend deployment and Supabase for backend services, ensuring your site is fast, secure, and always online.",
   },
   {
-    question: "How do you handle project timelines?",
-    answer: "Timelines are established at the beginning of each project based on complexity. I use agile methodologies to ensure timely delivery and consistent updates.",
+    question: "Can you help with SEO and site performance?",
+    answer: "Absolutely. I use tools like Google Search Console to monitor and improve site visibility, and I build with performance-first frameworks to ensure high Core Web Vitals scores.",
   },
   {
-    question: "Can you work with existing teams?",
-    answer: "Yes, I frequently collaborate with in-house design and engineering teams, providing extra capacity or specialized expertise where needed.",
+    question: "What kind of projects do you take on?",
+    answer: "I have experience building everything from movie streaming platforms and hotel booking systems to corporate factory websites. I enjoy tackling complex logic and creating seamless user experiences.",
   },
   {
-    question: "What tools do you use?",
-    answer: "My toolkit includes Figma for design, Next.js and Tailwind CSS for development, and various project management tools to keep things organized.",
+    question: "How can I start a project with you?",
+    answer: "You can reach out via the 'Let's Talk' button or contact me directly through WhatsApp. I'm always open to discussing new ideas and how I can help bring them to life.",
   },
 ];

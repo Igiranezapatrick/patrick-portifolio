@@ -13,8 +13,11 @@ export function ProjectsSection() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
-            <article
+            <a
               key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex flex-col overflow-hidden rounded-[24px] bg-[#1c1d1f] ring-1 ring-white/10 transition-all hover:ring-white/20"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
@@ -38,7 +41,7 @@ export function ProjectsSection() {
                   ↗
                 </div>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
