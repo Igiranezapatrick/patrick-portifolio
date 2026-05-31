@@ -1,37 +1,28 @@
 export function CtaSection() {
   return (
-    <section
-      id="contact"
-      className="section-reveal section-delay-5 surface rounded-[2.2rem] px-6 py-10 sm:px-8 lg:px-10"
-    >
-      <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-        <div className="max-w-3xl space-y-4">
-          <p className="text-sm uppercase tracking-[0.28em] text-[#bcb6ac]">
+    <section id="contact" className="section-reveal section-delay-5 py-20">
+      <div className="relative overflow-hidden rounded-[48px] bg-[#1c1d1f] p-12 text-center ring-1 ring-white/10 shadow-2xl md:p-20">
+        {/* Background Glow */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] bg-[#914bf1]/10 blur-[120px] pointer-events-none" />
+        
+        <div className="relative z-10 flex flex-col items-center gap-8">
+          <span className="text-[14px] font-medium uppercase tracking-[0.2em] text-[#914bf1]">
             Let&apos;s collaborate
-          </p>
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Unlock the same visual direction with your own story, assets, and
-            voice.
+          </span>
+          <h2 className="max-w-3xl text-[48px] font-semibold leading-tight tracking-tight text-white sm:text-[60px] md:text-[72px]">
+            Have a project <span className="text-white/40 italic">in mind?</span>
           </h2>
-          <p className="text-base leading-7 text-[#9f9a92] sm:text-lg">
-            This first pass is ready for your real branding. Swap in your
-            content, refine the cards, and extend the same design system into
-            the rest of the site.
+          <p className="max-w-[600px] text-[18px] text-white/50 leading-relaxed">
+            I help businesses build digital products that are functional, beautiful, and easy to use. Specialize in transforming ideas into beautifully crafted products.
           </p>
-        </div>
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <a
-            href="mailto:patrick@example.com"
-            className="rounded-full bg-[var(--accent)] px-5 py-3 text-center text-sm font-medium text-[var(--accent-ink)] hover:scale-[1.02]"
-          >
-            patrick@example.com
-          </a>
-          <a
-            href="#home"
-            className="rounded-full border border-white/10 px-5 py-3 text-center text-sm font-medium text-white hover:border-white/30 hover:bg-white/5"
-          >
-            Back to top
-          </a>
+          <div className="mt-4 flex flex-wrap justify-center gap-4">
+            <a
+              href="mailto:patrick@example.com"
+              className="accent-gradient inline-flex h-14 items-center justify-center rounded-full px-10 text-[18px] font-bold text-white shadow-[0_20px_40px_rgba(145,75,241,0.2)] transition-transform hover:scale-105 active:scale-95"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       </div>
     </section>

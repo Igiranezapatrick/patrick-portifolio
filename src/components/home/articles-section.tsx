@@ -1,35 +1,52 @@
-import { SectionHeading } from "@/components/home/section-heading";
+import Image from "next/image";
 import { articles } from "@/content/home";
 
 export function ArticlesSection() {
   return (
-    <section
-      id="thoughts"
-      className="section-reveal section-delay-4 space-y-6 rounded-[2rem] py-6"
-    >
-      <SectionHeading
-        eyebrow="Thoughts"
-        title="Design notes and perspectives laid out like editorial cards."
-        description="This section borrows the pacing of a portfolio journal grid and keeps the content length tuned for the same visual balance."
-      />
-      <div className="grid gap-4 lg:grid-cols-3">
-        {articles.map((article) => (
-          <article
-            key={article.title}
-            className="surface rounded-[1.75rem] p-5 sm:p-6"
-          >
-            <p className="text-xs uppercase tracking-[0.24em] text-[#b8b2a8]">
-              {article.category}
-            </p>
-            <h3 className="mt-4 text-2xl font-medium leading-tight text-white">
-              {article.title}
-            </h3>
-            <p className="mt-4 text-sm leading-6 text-[#9f9a92]">
-              {article.summary}
-            </p>
-            <p className="mt-6 text-sm text-[#7f7a72]">{article.date}</p>
-          </article>
-        ))}
+    <section id="thoughts" className="section-reveal section-delay-4 py-20">
+      <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-4">
+          <span className="text-[14px] font-medium uppercase tracking-[0.2em] text-[#914bf1]">
+            Thoughts
+          </span>
+          <h2 className="text-[48px] font-semibold tracking-tight text-white sm:text-[56px] md:text-[64px]">
+            Journal & <span className="text-white/40 italic">Insights.</span>
+          </h2>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {articles.map((article) => (
+            <article
+              key={article.title}
+              className="group cursor-pointer flex flex-col"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden rounded-[24px] bg-[#1c1d1f] ring-1 ring-white/10 transition-all duration-500 group-hover:ring-white/20">
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              
+              <div className="mt-6 flex flex-col gap-3 px-1">
+                <div className="flex items-center gap-3">
+                  <span className="text-[13px] font-bold uppercase tracking-widest text-[#914bf1]">
+                    {article.category}
+                  </span>
+                  <span className="h-1 w-1 rounded-full bg-white/20" />
+                  <span className="text-[14px] font-medium text-white/40">
+                    {article.date}
+                  </span>
+                </div>
+                
+                <h3 className="text-[22px] font-semibold text-white leading-snug group-hover:text-[#914bf1] transition-colors">
+                  {article.title}
+                </h3>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
