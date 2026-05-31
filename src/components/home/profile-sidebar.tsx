@@ -14,7 +14,7 @@ function SocialIcon({
       aria-label={label}
       className="text-white/40 transition hover:text-[#914bf1]"
     >
-      <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true" fill="currentColor">
+      <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true" fill="currentColor">
         {children}
       </svg>
     </a>
@@ -23,35 +23,35 @@ function SocialIcon({
 
 export function ProfileSidebar() {
   return (
-    <div className="rounded-[40px] bg-[#1c1d1f] p-8 ring-1 ring-white/10 shadow-2xl">
-      <div className="overflow-hidden rounded-[32px] bg-[#221f28]">
+    <div className="rounded-[24px] bg-[#1c1d1f] p-6 ring-1 ring-white/10 shadow-2xl">
+      <div className="overflow-hidden rounded-[16px] bg-[#221f28]">
         <div className="relative">
           <Image
             src="https://framerusercontent.com/images/7ckekOZAa0J28C2T3IfYTvNDv5U.jpg"
             alt="Aabraham James portrait"
-            width={800}
-            height={1000}
+            width={600}
+            height={750}
             priority
             className="aspect-[0.88] w-full object-cover"
           />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_28%,rgba(145,75,241,0.4),transparent_40%),linear-gradient(180deg,transparent_60%,rgba(16,17,18,0.8)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_28%,rgba(145,75,241,0.3),transparent_40%),linear-gradient(180deg,transparent_60%,rgba(16,17,18,0.7)_100%)]" />
         </div>
       </div>
 
-      <div className="mt-8 text-center">
-        <h2 className="text-[36px] font-bold tracking-tight text-white">
+      <div className="mt-6 text-center">
+        <h2 className="text-[28px] font-bold tracking-tight text-white">
           Aabraham James
         </h2>
-        <p className="mt-2 text-[18px] text-white/60">
+        <p className="mt-1.5 text-[15px] text-white/60">
           Product Designer & Developer
         </p>
-        <p className="mt-1 text-[18px] text-white/60">
+        <p className="text-[15px] text-white/60">
           Istanbul, Turkey
         </p>
 
-        <div className="mt-8 flex justify-center gap-6">
+        <div className="mt-6 flex justify-center gap-4">
           <SocialIcon label="Dribbble">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm7.65 4.82c.42.49.77 1.03 1.03 1.62-.88-.3-1.85-.47-2.88-.47-1.03 0-2.01.17-2.89.47.26-.59.61-1.13 1.03-1.62.88.3 1.85.47 2.88.47 1.03 0 2.01-.17 2.89-.47-.26.59-.61 1.13-1.03 1.62zm-2.83 8.35c.42-.49.77-1.03 1.03-1.62.88.3 1.85.47 2.88.47 1.03 0 2.01-.17 2.89-.47-.26.59-.61 1.13-1.03 1.62-.88-.3-1.85-.47-2.88-.47-1.03 0-2.01.17-2.89.47.26-.59.61-1.13 1.03-1.62zm-6.82 2.83c-.49-.42-1.03-.77-1.62-1.03.3-.88.47-1.85.47-2.88 0-1.03-.17-2.01-.47-2.89.59.26 1.13.61 1.62 1.03-.3.88-.47 1.85-.47 2.88 0 1.03.17 2.01.47 2.89-.59-.26-1.13-.61-1.62-1.03zM12 4c.83 0 1.61.16 2.33.44-.3.44-.65.85-1.04 1.21-.72-.28-1.5-.44-2.33-.44s-1.61.16-2.33.44c-.39-.36-.74-.77-1.04-1.21.72-.28 1.5-.44 2.33-.44zM4.44 9.67c.36.39.77.74 1.21 1.04.28-.72.44-1.5.44-2.33s-.16-1.61-.44-2.33c-.44.3-.85.65-1.21 1.04.28.72.44 1.5.44 2.33s-.16 1.61-.44 2.33zM4 12c0-.83.16-1.61.44-2.33.44.3.85.65 1.21 1.04-.28.72-.44 1.5-.44 2.33s.16 1.61.44 2.33c-.36.39-.74.74-1.21 1.04.28.72.44 1.5.44 2.33s-.16 1.61-.44 2.33zm5.67 7.56c-.39-.36-.74-.77-1.04-1.21.72.28 1.5.44 2.33.44s1.61-.16 2.33-.44c.39.36.74.77 1.04 1.21-.72.28-1.5.44-2.33.44s-1.61-.16-2.33-.44zM16.33 16.33c.36-.39.74-.74 1.21-1.04-.28.72-.44 1.5-.44 2.33s.16 1.61.44 2.33c-.36.39-.74.74-1.21 1.04.28-.72.44-1.5-.44-2.33s-.16-1.61.44-2.33z" />
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm7.65 4.82c.42.49.77 1.03 1.03 1.62-.88-.3-1.85-.47-2.88-.47-1.03 0-2.01.17-2.89.47.26-.59.61-1.13 1.03-1.62.88.3 1.85.47 2.88.47 1.03 0 2.01-.17 2.89-.47-.26.59-.61.13-1.03 1.62zm-2.83 8.35c.42-.49.77-1.03 1.03-1.62.88.3 1.85.47 2.88.47 1.03 0 2.01-.17 2.89-.47-.26.59-.61 1.13-1.03 1.62-.88-.3-1.85-.47-2.88-.47-1.03 0-2.01.17-2.89.47.26-.59.61-1.13 1.03-1.62zm-6.82 2.83c-.49-.42-1.03-.77-1.62-1.03.3-.88.47-1.85.47-2.88 0-1.03-.17-2.01-.47-2.89.59.26 1.13.61 1.62 1.03-.3.88-.47 1.85-.47 2.88 0 1.03.17 2.01.47 2.89-.59-.26-1.13-.61-1.62-1.03zM12 4c.83 0 1.61.16 2.33.44-.3.44-.65.85-1.04 1.21-.72-.28-1.5-.44-2.33-.44s-1.61.16-2.33.44c-.39-.36-.74-.77-1.04-1.21.72-.28 1.5-.44 2.33-.44zM4.44 9.67c.36.39.77.74 1.21 1.04.28-.72.44-1.5.44-2.33s-.16-1.61-.44-2.33c-.44.3-.85.65-1.21 1.04.28.72.44 1.5.44 2.33s-.16 1.61-.44 2.33zM4 12c0-.83.16-1.61.44-2.33.44.3.85.65 1.21 1.04-.28.72-.44 1.5-.44 2.33s.16 1.61.44 2.33c-.36.39-.74.74-1.21 1.04.28.72.44 1.5.44 2.33s-.16 1.61-.44 2.33zm5.67 7.56c-.39-.36-.74-.77-1.04-1.21.72.28 1.5.44 2.33.44s1.61-.16 2.33-.44c.39.36.74.77 1.04 1.21-.72.28-1.5.44-2.33.44s-1.61-.16-2.33-.44zM16.33 16.33c.36-.39.74-.74 1.21-1.04-.28.72-.44 1.5-.44 2.33s.16 1.61.44 2.33c-.36.39-.74.74-1.21 1.04.28-.72.44-1.5-.44-2.33s-.16-1.61.44-2.33z" />
           </SocialIcon>
           <SocialIcon label="Twitter">
             <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
@@ -66,7 +66,7 @@ export function ProfileSidebar() {
 
         <a
           href="#contact"
-          className="accent-gradient mt-24 inline-flex w-full items-center justify-center rounded-[20px] px-8 py-5 text-[20px] font-bold text-white shadow-[0_20px_40px_rgba(145,75,241,0.2)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+          className="accent-gradient mt-12 inline-flex w-full items-center justify-center rounded-[12px] px-6 py-4 text-[17px] font-bold text-white shadow-[0_12px_24px_rgba(145,75,241,0.15)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
         >
           Let&apos;s Talk
         </a>

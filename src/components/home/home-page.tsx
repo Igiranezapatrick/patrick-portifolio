@@ -14,11 +14,10 @@ export function HomePage() {
   return (
     <div className="page-shell relative isolate min-h-screen bg-[#101112]">
       <SiteNav />
-      <FloatingBadges />
-      <main className="relative z-10 mx-auto w-full max-w-[1372px] px-4 pt-8 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-10 lg:grid-cols-[430px_1fr] lg:gap-16 xl:grid-cols-[455px_1fr] xl:gap-20">
+      <main className="relative z-10 mx-auto w-full max-w-[1280px] px-4 pt-8 sm:px-6 lg:px-8">
+        <div className="grid items-start gap-10 lg:grid-cols-[340px_1fr] lg:gap-12 xl:grid-cols-[380px_1fr] xl:gap-16">
           {/* Left Sticky Sidebar */}
-          <aside className="lg:sticky lg:top-8 lg:pt-4">
+          <aside className="lg:sticky lg:top-12 lg:pt-4">
             <ProfileSidebar />
           </aside>
 
