@@ -20,10 +20,10 @@ export type Project = {
   image: string;
 };
 
-export type Service = {
-  title: string;
-  summary: string;
-  items: string[];
+export type Tool = {
+  name: string;
+  category: string;
+  icon: string;
 };
 
 export type Testimonial = {
@@ -81,71 +81,56 @@ export const clients: ClientLogo[] = [
 
 export const projects: Project[] = [
   {
-    title: "Project Atlas",
-    category: "Product Design",
+    title: "Majd",
+    category: "Free Portfolio Template",
     image: "/project-atlas.svg",
   },
   {
-    title: "Current Finance",
-    category: "Web Development",
+    title: "NajmAI",
+    category: "Modern Framer Template",
     image: "/project-current.svg",
   },
   {
-    title: "Frame Studio",
-    category: "Brand Identity",
+    title: "Damas",
+    category: "SaaS Framer Template",
     image: "/project-frame.svg",
   },
   {
-    title: "Signal App",
-    category: "UI/UX Design",
+    title: "Faseelh",
+    category: "Free Framer Template",
     image: "/project-signal.svg",
   },
 ];
 
-export const services: Service[] = [
-  {
-    title: "Product Strategy",
-    summary: "Defining the roadmap and core value proposition of your digital product.",
-    items: ["Market Research", "User Personas", "Value Proposition", "Roadmap Planning"],
-  },
-  {
-    title: "UI/UX Design",
-    summary: "Creating intuitive and beautiful interfaces that users love to interact with.",
-    items: ["User Flows", "Wireframing", "Visual Design", "Prototyping"],
-  },
-  {
-    title: "Full-stack Development",
-    summary: "Building robust and scalable applications using modern technologies.",
-    items: ["Frontend Development", "Backend Systems", "API Integration", "Performance Ops"],
-  },
+export const tools: Tool[] = [
+  { name: "SiteFlow", category: "Website Builder", icon: "S" },
+  { name: "Pixelo", category: "Design Tool", icon: "P" },
+  { name: "JuiceBox", category: "Payment Provider", icon: "J" },
+  { name: "TalkAI", category: "AI Assistant", icon: "T" },
+  { name: "NoteSpace", category: "Productivity Tool", icon: "N" },
+  { name: "WebCraft", category: "React framework", icon: "W" },
 ];
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "Patrick translated a rough idea into a product story that looked premium, felt easy to use, and impressed our investors immediately.",
-    name: "Mina Rowe",
-    role: "Founder, Atlas Commerce",
-    image: "/portrait-placeholder.svg",
-  },
-  {
-    quote: "The design work never stayed decorative. Every choice clarified the product, shortened handoff time, and gave engineering a cleaner path forward.",
-    name: "Darius Cole",
-    role: "Product Lead, Current Finance",
+    quote: "John expertly blends design with functionality, transforming our product into a sleek, user-friendly experience that our customers love!",
+    name: "William M.",
+    role: "",
     image: "/portrait-placeholder.svg",
   },
 ];
 
 export const articles: Article[] = [
   {
-    title: "Building calmer landing pages with stronger visual pacing",
-    date: "May 2, 2026",
-    category: "Layout",
+    title: "Starting and Growing a Career in Web Design",
+    date: "Apr 8, 2022",
+    category: "",
     image: "/project-atlas.svg",
   },
   {
-    title: "Why product storytelling should start before the hero section",
-    date: "April 16, 2026",
-    category: "Strategy",
+    title: "Create a Landing Page That Performs Great",
+    date: "Mar 15, 2022",
+    category: "",
     image: "/project-current.svg",
   },
 ];

@@ -9,14 +9,11 @@ export function FaqSection() {
   return (
     <section id="faq" className="section-reveal section-delay-4">
       <div className="flex flex-col gap-10">
-        <div className="flex flex-col gap-3">
-          <span className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#914bf1]">
-            FAQ
-          </span>
-          <h2 className="text-[42px] font-semibold tracking-tight text-white sm:text-[52px] md:text-[64px]">
-            Common <span className="text-white/40 italic">Questions.</span>
-          </h2>
-        </div>
+        <h2 className="text-[48px] font-semibold leading-[1.1] tracking-[-0.05em] text-white sm:text-[64px] md:text-[72px]">
+          Any Questions?
+          <br />
+          <span className="text-[#914bf1]">Look here</span>
+        </h2>
 
         <div className="flex flex-col gap-3 max-w-3xl">
           {faqs.map((faq, index) => {
@@ -29,13 +26,13 @@ export function FaqSection() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between p-5 text-left"
+                  className="flex w-full items-center justify-between p-6 text-left"
                 >
-                  <span className="text-[16px] font-bold text-white sm:text-[18px]">
+                  <span className="text-[18px] font-bold text-white sm:text-[20px]">
                     {faq.question}
                   </span>
-                  <div className={`flex h-7 w-7 items-center justify-center rounded-full bg-white/5 text-white transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}>
-                    <span className="text-lg">+</span>
+                  <div className={`flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300 ${isOpen ? "bg-[#914bf1] text-white rotate-45" : "bg-white/5 text-white/40"}`}>
+                    <span className="text-2xl">+</span>
                   </div>
                 </button>
                 <div
@@ -44,7 +41,7 @@ export function FaqSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-5 pb-5 text-[14px] leading-relaxed text-white/50">
+                    <p className="px-6 pb-6 text-[16px] leading-relaxed text-white/50">
                       {faq.answer}
                     </p>
                   </div>

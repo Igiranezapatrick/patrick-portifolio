@@ -1,49 +1,84 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { testimonials } from "@/content/home";
 
 export function TestimonialsSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const previous = () => {
+    setActiveIndex((current) =>
+      current === 0 ? testimonials.length - 1 : current - 1
+    );
+  };
+
+  const next = () => {
+    setActiveIndex((current) =>
+      current === testimonials.length - 1 ? 0 : current + 1
+    );
+  };
+
   return (
     <section id="testimonials" className="section-reveal section-delay-3">
       <div className="flex flex-col gap-10">
-        <div className="flex flex-col gap-3">
-          <span className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#914bf1]">
-            Experience
-          </span>
-          <h2 className="text-[42px] font-semibold tracking-tight text-white sm:text-[52px] md:text-[64px]">
-            What clients <span className="text-white/40 italic">say.</span>
+        <div className="flex items-end justify-between">
+          <h2 className="text-[48px] font-semibold leading-[1.1] tracking-[-0.05em] text-white sm:text-[64px] md:text-[72px]">
+            What Clients Say
+            <br />
+            About My <span className="text-[#914bf1]">Work</span>
           </h2>
+          
+          <div className="mb-2 flex items-center gap-3">
+            <button
+              onClick={previous}
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#914bf1]/20 text-white transition-all hover:bg-[#914bf1]/40"
+              aria-label="Previous testimonial"
+            >
+              <span className="text-xl">←</span>
+            </button>
+            <button
+              onClick={next}
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#914bf1]/80 text-white transition-all hover:bg-[#914bf1]"
+              aria-label="Next testimonial"
+            >
+              <span className="text-xl">→</span>
+            </button>
+          </div>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
-          {testimonials.map((testimonial) => (
-            <article
-              key={testimonial.name}
-              className="group flex flex-col justify-between rounded-[24px] bg-[#1c1d1f] p-6 ring-1 ring-white/10 transition-all duration-500 hover:ring-white/20 shadow-xl"
-            >
-              <p className="text-[17px] leading-relaxed text-white/80 italic">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
-
-              <div className="mt-6 flex items-center gap-3.5 border-t border-white/5 pt-6">
-                <div className="relative h-10 w-10 overflow-hidden rounded-full ring-1 ring-white/10">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    fill
-                    className="object-cover"
-                  />
+        <div className="overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-out"
+            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          >
+            {testimonials.map((testimonial) => (
+              <article
+                key={testimonial.name}
+                className="min-w-full rounded-[32px] bg-[#1c1d1f] p-10 ring-1 ring-white/10 shadow-xl md:p-12"
+              >
+                <div className="flex flex-col gap-8">
+                  <div className="flex items-center gap-4">
+                    <div className="relative h-14 w-14 overflow-hidden rounded-full ring-2 ring-white/10">
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <span className="text-[24px] font-bold text-white">
+                      {testimonial.name}
+                    </span>
+                  </div>
+                  
+                  <p className="text-[20px] leading-relaxed text-white/70 md:text-[24px]">
+                    {testimonial.quote}
+                  </p>
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-[15px] font-bold text-white leading-none">
-                    {testimonial.name}
-                  </span>
-                  <span className="mt-1 text-[12px] font-bold text-white/30 uppercase tracking-widest">
-                    {testimonial.role}
-                  </span>
-                </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
