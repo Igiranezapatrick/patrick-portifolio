@@ -46,8 +46,9 @@ export type Faq = {
 };
 
 export const navLinks: NavLink[] = [
-  { href: "#services", label: "Expertise" },
-  { href: "#projects", label: "Work" },
+  { href: "#home", label: "Home" },
+  { href: "#projects", label: "Projects" },
+  { href: "#services", label: "Tools" },
   { href: "#testimonials", label: "Experience" },
   { href: "#thoughts", label: "Thoughts" },
   { href: "#contact", label: "Contact" },
@@ -55,18 +56,18 @@ export const navLinks: NavLink[] = [
 
 export const stats: Stat[] = [
   {
-    value: "12+",
-    label: "Years of experience",
+    value: "12",
+    label: "Years of Experience",
     detail: "",
   },
   {
-    value: "46+",
-    label: "Projects completed",
+    value: "46",
+    label: "Projects Completed",
     detail: "",
   },
   {
-    value: "20+",
-    label: "Worldwide clients",
+    value: "20",
+    label: "Worldwide Clients",
     detail: "",
   },
 ];
