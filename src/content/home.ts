@@ -137,11 +137,23 @@ export const articles: Article[] = [
 
 export const faqs: Faq[] = [
   {
-    question: "What kinds of projects are the best fit?",
-    answer: "Portfolio sites, product marketing pages, early-stage dashboards, and design-system-driven frontend work are the strongest fit for this workflow.",
+    question: "What services do you offer?",
+    answer: "I provide a wide range of services including UI/UX design, frontend development, and product strategy to help businesses launch successful digital products.",
   },
   {
-    question: "How close is this to the original inspiration?",
-    answer: "The build mirrors the original page's structure, visual density, and atmosphere while using fresh content and safe replacement assets.",
+    question: "What is your design process?",
+    answer: "My process starts with research and discovery, followed by wireframing, high-fidelity design, and iterative prototyping to ensure the best user experience.",
+  },
+  {
+    question: "How do you handle project timelines?",
+    answer: "Timelines are established at the beginning of each project based on complexity. I use agile methodologies to ensure timely delivery and consistent updates.",
+  },
+  {
+    question: "Can you work with existing teams?",
+    answer: "Yes, I frequently collaborate with in-house design and engineering teams, providing extra capacity or specialized expertise where needed.",
+  },
+  {
+    question: "What tools do you use?",
+    answer: "My toolkit includes Figma for design, Next.js and Tailwind CSS for development, and various project management tools to keep things organized.",
   },
 ];
