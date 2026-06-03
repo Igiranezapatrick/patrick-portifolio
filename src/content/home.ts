@@ -84,25 +84,25 @@ export const projects: Project[] = [
   {
     title: "AG.Micorp",
     category: "Agasobanuye Streaming Site",
-    image: "/project-atlas.svg",
+    image: "/agmicorp.png",
     link: "https://ag.micorp.pro",
   },
   {
     title: "Mugamba Coffee",
     category: "Coffee Factory Website",
-    image: "/project-current.svg",
+    image: "/mugamba.png",
     link: "https://mugambacf.vercel.app",
   },
   {
     title: "Kairos Inn",
     category: "Full Stack Hotel Website",
-    image: "/project-frame.svg",
+    image: "/kairosinn.png",
     link: "https://kairosinn.netlify.app",
   },
   {
     title: "Pi Films",
     category: "Movie Streaming Site",
-    image: "/project-signal.svg",
+    image: "/pifilms.png",
     link: "https://pi-films.netlify.app",
   },
 ];

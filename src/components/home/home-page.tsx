@@ -9,6 +9,7 @@ import { SiteNav } from "@/components/home/site-nav";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { ProfileSidebar } from "@/components/home/profile-sidebar";
 import { FloatingBadges } from "@/components/home/floating-badges";
+import { ContactForm } from "@/components/home/contact-form";
 
 export function HomePage() {
   return (
@@ -29,6 +30,7 @@ export function HomePage() {
             <TestimonialsSection />
             <ArticlesSection />
             <FaqSection />
+            <ContactForm />
             <CtaSection />
             <SiteFooter />
           </div>
