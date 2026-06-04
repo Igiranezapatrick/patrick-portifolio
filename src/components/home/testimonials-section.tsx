@@ -2,20 +2,21 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { testimonials } from "@/content/home";
+import { useLanguage } from "@/context/language-context";
 
 export function TestimonialsSection() {
+  const { content } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const previous = () => {
     setActiveIndex((current) =>
-      current === 0 ? testimonials.length - 1 : current - 1
+      current === 0 ? content.testimonials.length - 1 : current - 1
     );
   };
 
   const next = () => {
     setActiveIndex((current) =>
-      current === testimonials.length - 1 ? 0 : current + 1
+      current === content.testimonials.length - 1 ? 0 : current + 1
     );
   };
 
@@ -24,7 +25,7 @@ export function TestimonialsSection() {
       <div className="flex flex-col gap-10">
         <div className="flex items-end justify-between">
           <h2 className="text-[48px] font-semibold leading-[1.1] tracking-[-0.05em] text-white sm:text-[64px] md:text-[72px]">
-            What Clients Say
+            {content.testimonialsTitle}
             <br />
             About My <span className="text-[#914bf1]">Work</span>
           </h2>
@@ -52,7 +53,7 @@ export function TestimonialsSection() {
             className="flex transition-transform duration-500 ease-out"
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
-            {testimonials.map((testimonial) => (
+            {content.testimonials.map((testimonial) => (
               <article
                 key={testimonial.name}
                 className="min-w-full rounded-[32px] bg-[#1c1d1f] p-10 ring-1 ring-white/10 shadow-xl md:p-12"

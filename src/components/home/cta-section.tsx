@@ -1,13 +1,17 @@
+"use client";
+
+import { useLanguage } from "@/context/language-context";
+
 export function CtaSection() {
+  const { content } = useLanguage();
+
   return (
     <section id="contact" className="section-reveal section-delay-5">
       <div className="group relative overflow-hidden rounded-[32px] bg-[#1c1d1f] p-10 ring-1 ring-white/10 shadow-2xl transition-all hover:ring-white/20 md:p-16">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="flex flex-col gap-6 max-w-2xl">
             <h2 className="text-[52px] font-bold leading-[1] tracking-tight text-white sm:text-[64px] md:text-[80px]">
-              Let&apos;s
-              <br />
-              <span className="text-[#914bf1]">collaborate</span>
+              {content.contactTitle}
             </h2>
             <p className="text-[18px] text-white/50 leading-relaxed md:text-[20px]">
               Unlock the potential of your product with expert design and development services. Let&apos;s collaborate to create user-centered solutions that not only meet your goals but also delight your users.

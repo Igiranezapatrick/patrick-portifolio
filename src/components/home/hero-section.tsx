@@ -1,23 +1,25 @@
-import { stats, clients } from "@/content/home";
+"use client";
+
+import { useLanguage } from "@/context/language-context";
 
 export function HeroSection() {
+  const { content } = useLanguage();
+
   return (
     <section id="home" className="section-reveal section-delay-1">
       <div className="flex flex-col">
         <h1 className="text-[52px] font-semibold leading-[1.1] tracking-[-0.04em] text-white sm:text-[64px] md:text-[80px] xl:text-[88px]">
-          Transforming Your
+          {content.heroTitle}
           <br />
-          Ideas into <span className="text-[#914bf1]">Reality</span>
+          <span className="text-[#914bf1]">Reality</span>
         </h1>
 
         <p className="mt-6 max-w-[640px] text-[18px] leading-[1.5] text-white/60 sm:text-[20px]">
-          Passionate about creating intuitive and engaging user experiences.
-          <br className="hidden sm:block" />
-          Specialize in transforming ideas into beautifully crafted products.
+          {content.aboutMe}
         </p>
 
         <div className="mt-12 flex flex-wrap gap-x-12 gap-y-6">
-          {stats.map((stat) => (
+          {content.stats.map((stat) => (
             <div key={stat.label}>
               <div className="text-[52px] font-bold leading-none tracking-tight text-white sm:text-[68px]">
                 +{stat.value}
@@ -36,7 +38,7 @@ export function HeroSection() {
             href="#contact"
             className="accent-gradient inline-flex h-12 items-center justify-center rounded-full px-8 text-[16px] font-bold text-white shadow-[0_12px_24px_rgba(145,75,241,0.15)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
           >
-            Let&apos;s Talk
+            {content.heroCta}
           </a>
           <a
             href="#projects"
@@ -51,7 +53,7 @@ export function HeroSection() {
             Relied on by companies near, far, and worldwide
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-x-12 gap-y-6 grayscale opacity-20">
-            {clients.map((client) => (
+            {content.clients.map((client) => (
               <div key={client.name} className="flex items-center gap-2.5">
                 <div className="h-7 w-7 rounded-full bg-white/20 flex items-center justify-center text-[9px] font-bold text-white">
                   {client.name[0]}

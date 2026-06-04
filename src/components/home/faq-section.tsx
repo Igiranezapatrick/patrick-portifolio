@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { faqs } from "@/content/home";
+import { useLanguage } from "@/context/language-context";
 
 function ChevronDown() {
   return (
@@ -12,6 +12,7 @@ function ChevronDown() {
 }
 
 export function FaqSection() {
+  const { content } = useLanguage();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -24,7 +25,7 @@ export function FaqSection() {
         </h2>
 
         <div className="flex flex-col gap-3">
-          {faqs.map((faq, index) => {
+          {content.faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (

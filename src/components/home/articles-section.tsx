@@ -1,18 +1,22 @@
+"use client";
+
 import Image from "next/image";
-import { articles } from "@/content/home";
+import { useLanguage } from "@/context/language-context";
 
 export function ArticlesSection() {
+  const { content } = useLanguage();
+
   return (
     <section id="thoughts" className="section-reveal section-delay-4">
       <div className="flex flex-col gap-10">
         <h2 className="text-[48px] font-semibold leading-[1.1] tracking-[-0.05em] text-white sm:text-[64px] md:text-[72px]">
-          Design Thoughts
+          {content.thoughtsTitle}
           <br />
           and <span className="text-[#914bf1]">Perspectives</span>
         </h2>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {articles.map((article) => (
+          {content.articles.map((article) => (
             <article
               key={article.title}
               className="group cursor-pointer flex flex-col overflow-hidden rounded-[32px] bg-[#1c1d1f] ring-1 ring-white/10 transition-all hover:ring-white/20"

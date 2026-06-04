@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/context/language-context";
 
 export function ProfileSidebar() {
+  const { content } = useLanguage();
+
   return (
     <div className="rounded-[24px] bg-[#1c1d1f] p-6 ring-1 ring-white/10 shadow-2xl">
       <div className="overflow-hidden rounded-[16px] bg-[#221f28]">
@@ -49,7 +54,7 @@ export function ProfileSidebar() {
           rel="noopener noreferrer"
           className="accent-gradient mt-12 inline-flex w-full items-center justify-center rounded-[12px] px-6 py-4 text-[17px] font-bold text-white shadow-[0_12px_24px_rgba(145,75,241,0.15)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
         >
-          Let&apos;s Talk <span className="ml-2">→</span>
+          {content.heroCta} <span className="ml-2">→</span>
         </a>
       </div>
     </div>
